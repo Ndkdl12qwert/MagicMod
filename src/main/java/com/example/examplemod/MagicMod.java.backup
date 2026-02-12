@@ -1,0 +1,76 @@
+﻿package com.example.examplemod;
+
+import com.mojang.logging.LogUtils;
+import com.example.examplemod.MagicSword;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+import org.slf4j.Logger;
+
+// 导入你的物品类（如果存在）
+// import com.example.examplemod.items.weapons.MagicSword;
+
+@Mod(MagicMod.MODID)
+public class MagicMod {
+    // MOD ID - 必须和gradle.properties中的mod_id一致
+    public static final String MODID = "magicmod";
+
+    // 日志记录器
+    private static final Logger LOGGER = LogUtils.getLogger();
+
+    // 物品注册器
+    public static final DeferredRegister<Item> ITEMS =
+        DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+
+    // === 在这里注册你的物品 ===
+    // 示例：魔法剑（先注释掉，等创建了MagicSword类再取消注释）
+    // public static final RegistryObject<Item> MAGIC_SWORD =
+    //     ITEMS.register("magic_sword", () -> new MagicSword());
+
+    // 示例：一个简单测试物品（先用这个测试）
+    public static final RegistryObject<Item> MAGIC_SWORD = ITEMS.register(
+        "magic_sword",
+        () -> new MagicSword()
+    );
+
+    public MagicMod() {
+        LOGGER.info("初始化魔法MOD...");
+
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        // 注册物品系统
+        ITEMS.register(modEventBus);
+
+        // 注册事件总线
+        MinecraftForge.EVENT_BUS.register(this);
+
+        // 添加物品到创造模式标签页
+        modEventBus.addListener(this::addCreative);
+
+        LOGGER.info("魔法MOD初始化完成！MOD ID: {}", MODID);
+    }
+
+    // 将物品添加到创造模式标签页
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        // 将魔法剑添加到战斗标签页
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(MAGIC_SWORD);
+        }
+    }
+
+    // 服务器启动时的事件
+    @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event) {
+        LOGGER.info("服务器启动 - 魔法MOD已就绪");
+    }
+}
+
