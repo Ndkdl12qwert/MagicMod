@@ -1,6 +1,8 @@
 package com.example.examplemod;
 
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionHand;
@@ -36,6 +38,8 @@ public class MagicSword extends SwordItem {
                         .fireResistant()
         );
     }
+
+
 
     // ✨ 核心：永不磨损（强制版本）
     @Override
@@ -81,10 +85,16 @@ public class MagicSword extends SwordItem {
             // 神谕
             if (attacker instanceof Player) {
                 ((Player)attacker).sendSystemMessage(Component.literal(
-                        "§c☠ §6GODSWORD §c☠ §8» §7" + entityName + " §8已被§6抹除§8存在"
+                        "§c☠ §6GODSWORD §c☠ §8» §7" + entityName + " §8已被§c§k fjafjOFJoiewjf§r"
                 ));
             }
         }
+        return true;
+    }
+
+    // ===== ✨ 核心：挖方块也不掉耐久！=====
+    @Override
+    public boolean mineBlock(ItemStack stack, Level world, BlockState state, BlockPos pos, LivingEntity miner) {
         return true;
     }
 
@@ -439,8 +449,8 @@ public class MagicSword extends SwordItem {
         tooltip.add(Component.literal(""));
 
         // ===== 中央神印（金色！）=====
-        tooltip.add(Component.literal("                       §6§lG O D S W O R D"));
-        tooltip.add(Component.literal("                           §7§l「神 陨」"));
+        tooltip.add(Component.literal("                §6§lG O D S W O R D"));
+        tooltip.add(Component.literal("                     §7§l「神 陨」"));
         tooltip.add(Component.literal(""));
 
         // ===== 神权宣言（彩色！）=====

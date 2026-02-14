@@ -1,6 +1,7 @@
 package com.example.examplemod;
 
 import com.mojang.logging.LogUtils;
+import com.example.examplemod.MagicAxe;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -29,10 +30,20 @@ public class MagicMod {
             () -> new MagicSword()
     );
 
+    public static final RegistryObject<Item> MAGIC_PICKAXE = ITEMS.register(
+            "magic_pickaxe",
+            () -> new MagicPickaxe()
+    );
+
+    public static final RegistryObject<Item> MAGIC_AXE = ITEMS.register(
+            "magic_axe",
+            () -> new MagicAxe()
+    );
+
     public MagicMod() {
         LOGGER.info("§6§l╔════════════════════════════════╗");
-        LOGGER.info("§6§l║     G O D S W O R D          ║");
-        LOGGER.info("§6§l║      神 · 权 · 降 · 临       ║");
+        LOGGER.info("§6§l║     G O D S W O R D         ║");
+        LOGGER.info("§6§l║        神·权·降·临           ║");
         LOGGER.info("§6§l╚════════════════════════════════╝");
         LOGGER.info("");
 

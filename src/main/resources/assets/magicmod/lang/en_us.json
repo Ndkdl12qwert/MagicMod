@@ -1,4 +1,8 @@
 ﻿{
-  "item.magicmod.magic_sword": "§8「§k|§6§l GODSWORD · 神陨 §8」",
-  "itemGroup.magicmod.godsword_tab": "§6§lGODSWORD · 神权"
+  "itemGroup.magicmod.godsword_tab": "§k infinity§r §6§lGODSWORD · 神权 §k infinite§r",
+  "item.magicmod.magic_sword": "§k infinite§r §8「§k|§6§l GODSWORD · Fallen §8」§k infinity§r",
+  "item.magicmod.magic_pickaxe": "§8「§k|§2§l GODPICKAXE · Mountainbreaker §8」",
+  "item.magicmod.magic_axe": "§k infinity§r GODAXE · Splitting all things §k infinite§r",
+  "creativetab.magicmod": "§6§lGODSWORD · Divine Authority"
 }
+

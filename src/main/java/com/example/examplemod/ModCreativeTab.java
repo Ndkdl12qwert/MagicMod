@@ -19,6 +19,8 @@ public class ModCreativeTab {
                     .title(Component.translatable("creativetab.magicmod"))
                     .displayItems((parameters, output) -> {
                         output.accept(MagicMod.MAGIC_SWORD.get());
+                        output.accept(MagicMod.MAGIC_PICKAXE.get());
+                        output.accept(MagicMod.MAGIC_AXE.get());
                     })
                     .build()
     );
