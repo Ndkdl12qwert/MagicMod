@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "ingredient": {
+    "item": "minecraft:netherite_block"
+  },
+  "result": "blackgoldmod:blackgold_nugget",
+  "experience": 2.0,
+  "cookingtime": 300
+}

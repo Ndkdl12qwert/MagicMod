@@ -1,0 +1,14 @@
+{
+  "itemGroup.blackgoldmod.godsword_tab": "§k infinity§r §6§lGODSWORD · 神权 §k infinite§r",
+  "item.blackgoldmod.blackgold_sword": "§k infinite§r §8「§k|§6§l GODSWORD · Fallen §8」§k infinity§r",
+  "item.blackgoldmod.blackgold_pickaxe": "§8「§k|§2§l GODPICKAXE · Mountainbreaker §8」",
+  "item.blackgoldmod.blackgold_axe": "§k infinity§r GODAXE · Splitting all things §k infinite§r",
+  "item.blackgoldmod.blackgold_helmet": "§k infinite§r §8「§k|§b§l GODHELMET · Mind of God §8」§k infinite§r",
+  "item.blackgoldmod.blackgold_chestplate": "§k infinite§r §8「§k|§c§l GODCHESTPLATE · Soul of God §8」§k infinite§r",
+  "item.blackgoldmod.blackgold_leggings": "§k infinite§r §8「§k|§a§l GODLEGGINGS · Grace of God §8」§k infinite§r",
+  "item.blackgoldmod.blackgold_boots": "§k infinite§r §8「§k|§e§l GODBOOTS · Stride of God §8」§k infinite§r",
+  "item.blackgoldmod.blackgold_nugget": "黑金粒",
+  "item.blackgoldmod.blackgold_ingot": "黑金锭",
+  "item.blackgoldmod.god_blackgold_upgrade_template": "黑金升级模板",
+  "creativetab.blackgoldmod": "§6§lGODSWORD · Divine Authority"
+}

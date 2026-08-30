@@ -8,7 +8,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = MagicMod.MODID)
+@Mod.EventBusSubscriber(modid = BlackGoldMod.MODID)
 public class ModEffects {
 
     // 每秒检查一次，不是每 tick！
@@ -32,7 +32,7 @@ public class ModEffects {
         ItemStack offHand = player.getOffhandItem();
 
         // ===== 神剑效果 =====
-        if (mainHand.getItem() instanceof MagicSword || offHand.getItem() instanceof MagicSword) {
+        if (mainHand.getItem() instanceof BlackGoldSword || offHand.getItem() instanceof BlackGoldSword) {
             // 力量 V (5级)
             player.addEffect(new MobEffectInstance(
                     MobEffects.DAMAGE_BOOST, 999999999, 255, false, true, true
@@ -68,7 +68,7 @@ public class ModEffects {
         }
 
         // ===== 神镐效果 =====
-        if (mainHand.getItem() instanceof MagicSword || offHand.getItem() instanceof MagicSword) {
+        if (mainHand.getItem() instanceof BlackGoldSword || offHand.getItem() instanceof BlackGoldSword) {
             // 力量 V (5级)
             player.addEffect(new MobEffectInstance(
                     MobEffects.DAMAGE_BOOST, 999999999, 255, false, true, true
@@ -104,7 +104,7 @@ public class ModEffects {
         }
 
         // ===== 神斧效果 =====
-        if (mainHand.getItem() instanceof MagicSword || offHand.getItem() instanceof MagicSword) {
+        if (mainHand.getItem() instanceof BlackGoldSword || offHand.getItem() instanceof BlackGoldSword) {
             // 力量 V (5级)
             player.addEffect(new MobEffectInstance(
                     MobEffects.DAMAGE_BOOST, 999999999, 255, false, true, true
